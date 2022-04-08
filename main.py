@@ -4,7 +4,7 @@ import pandas as pd
 # from sklearn.preprocessing import LabelEncoder
 import xgboost as xgb
 import numpy as np
-
+import pickle
 
 st.header("Number of Clicks Prediction")
 # st.text_input("Enter your Name: ", key="name")
@@ -12,7 +12,11 @@ data = pd.read_csv("data.csv")
 
 xgb_model = xgb.XGBRegressor()
 
-xgb_model.load_model("xgb_model.json")
+# xgb_model.load_model("xgb_model.json")
+file_name = "xgb_reg.pkl"
+
+xgb_model_loaded = pickle.load(open(file_name, "rb"))
+
 
 # X = data[["Impressions", "CPC Bid", "Cost"]]
 # y = data["Clicks"]
