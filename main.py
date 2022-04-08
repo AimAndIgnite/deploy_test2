@@ -10,6 +10,10 @@ st.header("Number of Clicks Prediction")
 # st.text_input("Enter your Name: ", key="name")
 data = pd.read_csv("data.csv")
 
+xgb_model = xgb.XGBRegressor()
+
+xgb_model.load_model("xgb_model.json")
+
 # X = data[["Impressions", "CPC Bid", "Cost"]]
 # y = data["Clicks"]
 
