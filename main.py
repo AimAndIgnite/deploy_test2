@@ -8,7 +8,7 @@ import numpy as np
 
 st.header("Number of Clicks Prediction")
 # st.text_input("Enter your Name: ", key="name")
-data = pd.read_csv("https://raw.githubusercontent.com/AimAndIgnite/deploy_test/master/testdata.csv")
+data = pd.read_csv("data.csv")
 
 # X = data[["Impressions", "CPC Bid", "Cost"]]
 # y = data["Clicks"]
